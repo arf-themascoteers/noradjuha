@@ -41,7 +41,8 @@ class SceneToCSVs:
         epsg = self.get_epsg()
         bands = self.get_band_list(clip_path)
         df = pd.read_csv(self.source_csv_path)
-        df["when"] = SceneToCSVs.get_epoch(df["when"])
+        #TODO
+        df["when"] = 0#SceneToCSVs.get_epoch(df["when"])
         spatial_columns = CSVProcessor.get_spatial_columns(df)
         all_columns = list(df.columns) + spatial_columns + bands
         table = np.zeros((len(df), len(all_columns)))
