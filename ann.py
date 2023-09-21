@@ -26,7 +26,7 @@ class ANN(nn.Module):
         self.EARLY_STOP_THRESHOLD = 1000
         model_name = str(time()).replace(".","_")
         self.BEST_MODEL_PATH = f"models/{model_name}.h5"
-        self.EARLY_STOP = True
+        self.EARLY_STOP = False
         x_size = validation_x.shape[1]
 
         self.linear = nn.Sequential(
