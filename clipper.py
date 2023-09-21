@@ -63,8 +63,9 @@ class Clipper:
 
 
 if __name__ == "__main__":
-    source = r"D:\Data\Tim\Created\Vectis\Higher\SKYWATCH_PHR_PS_20220204T0037_RGBN_Tile_0_0_e031.tif"
-    dest = r"D:\out\abc.tif"
+    #source = r"D:\Data\Tim\Created\Nora\Sentinel-2\S2A_MSIL2A_20220319T002711_N0400_R016_T54HWE_20220319T033313\S2A_MSIL2A_20220319T002711_N0400_R016_T54HWE_20220319T033313.SAFE\GRANULE\L2A_T54HWE_A035191_20220319T002711\IMG_DATA\R10m\T54HWE_20220319T002711_TCI_10m.jp2"
+    source = r"D:\Data\Tim\Created\Nora\Sentinel-2\S2B_MSIL2A_20220413T002709_N0400_R016_T54HWE_20220413T021511\S2B_MSIL2A_20220413T002709_N0400_R016_T54HWE_20220413T021511.SAFE\GRANULE\L2A_T54HWE_A026640_20220413T003627\IMG_DATA\R10m\T54HWE_20220413T002709_TCI_10m.jp2"
+    dest = r"D:\work\nora2.jp2"
     source_csv_path = "data/shorter.csv"
     clipper = Clipper(source, dest, source_csv_path)
     clipper.clip()
