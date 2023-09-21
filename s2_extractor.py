@@ -12,9 +12,9 @@ class S2Extractor:
         self.scene_list = scenes
         self.TEST = False
         self.FILTERED = True
-        self.source_csv = "vectis.csv"
+        self.source_csv = "nora.csv"
         if self.TEST:
-            self.source_csv = "vectis_min.csv"
+            self.source_csv = "nora_min.csv"
         self.source_csv_path = os.path.join("data", self.source_csv)
         self.datasets_list_file = "datasets.csv"
 

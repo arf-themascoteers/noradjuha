@@ -1,5 +1,5 @@
 import os
-from base_path import BASE_PATH
+from base_path import NORADJUHA_BASE_PATH
 from clipper import Clipper
 from s2_bands import S2Bands
 
@@ -62,7 +62,7 @@ class SceneProcessor:
         return bands
 
     def get_scene_source(self, scene):
-        scene_path = os.path.join(BASE_PATH, scene)
+        scene_path = os.path.join(NORADJUHA_BASE_PATH, scene)
         return SceneProcessor.get_img_data_path(scene_path)
 
     @staticmethod
@@ -77,7 +77,7 @@ class SceneProcessor:
 
     @staticmethod
     def get_all_scenes():
-        scene_list = os.listdir(BASE_PATH)
+        scene_list = os.listdir(NORADJUHA_BASE_PATH)
         scene_list = [scene for scene in scene_list if scene.startswith("S2")
-                           and os.path.isdir(os.path.join(BASE_PATH, scene))]
+                      and os.path.isdir(os.path.join(NORADJUHA_BASE_PATH, scene))]
         return scene_list
